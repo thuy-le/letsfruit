@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "moduleResolution": "classic"
+    },
+    "exclude": [
+        "node_modules",
+        "typings/browser",
+        "typings/browser.d.ts"
+    ],
+    "compileOnSave": true
+}

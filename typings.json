@@ -1,0 +1,14 @@
+{
+  "ambientDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160412133217",
+    "angular-ui-bootstrap": "registry:dt/angular-ui-bootstrap#0.13.3+20160406111533",
+    "bootstrap": "registry:dt/bootstrap#3.3.5+20160316155526",
+    "jquery": "registry:dt/jquery#1.10.0+20160417213236",
+    "postal": "registry:dt/postal#1.0.6+20160316155526",
+    "q": "registry:dt/q#0.0.0+20160417152954",
+    "require": "registry:dt/require#2.1.20+20160316155526"
+  },
+  "dependencies": {
+    "moment": "registry:npm/moment#2.10.5+20160211003958"
+  }
+}

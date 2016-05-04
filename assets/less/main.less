@@ -1,8 +1,37 @@
-@import "input/default-input";
-@import "text/default-text";
+@import "../../node_modules/bootstrap/less/bootstrap";
+@import "variables";
+@import "base/icon";
+@import "base/color";
+@import "base/input";
+@import "base/button";
+@import "base/tooltip";
 
-@import 'semaphore/semaphore.less';
+@import "base/base";
+@import "templates/header";
+@import "templates/banner";
+@import "templates/homepage";
+@import "templates/footer";
+
+@font-face {
+  font-family: fruityFont;
+  src: url("/assets/less/fonts/fruit.ttf");
+}
+
+@font-face {
+  font-family: avoFont;
+  src: url("/assets/less/fonts/avo.ttf");
+}
+
+@font-face {
+  font-family: avoBoldFont;
+  src: url("/assets/less/fonts/avoBold.ttf");
+}
+
 
 html, body {
-  background-color: #E5E5EE;
+  background-color: #FFFFFF;
+  margin: 0;
+  font-family: @main-font;
+  font-size: @font-size;
+  color: @main-text-color;
 }

@@ -14,8 +14,8 @@ define([
         });
 
         $routeProvider
-            .when('/model/:modelId', {templateUrl: '/templates/numbersView.html', controller: 'NumbersController'})
-            .otherwise({templateUrl: '/templates/numbersView.html', controller: 'NumbersController'});
+            .when('/model/:modelId', {templateUrl: '/templates/homepage.html'})
+            .otherwise({templateUrl: '/templates/homepage.html'});
     }
 
     AngularConfig.$inject = [ '$routeProvider', '$locationProvider'];
@@ -30,8 +30,7 @@ define([
         authors: [ 'apiumtech' ],
         version: 0.1,
         src: [
-            'ui/PomodoroController',
-            'ui/NumbersController'
+            'ui/header/HeaderController'
         ]
     };
 

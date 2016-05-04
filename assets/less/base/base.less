@@ -1,0 +1,81 @@
+//define bootstrap variable
+@icon-font-path: "/assets/fonts/";
+@border-radius-base: 1px;
+@border-radius-large: 1px;
+@border-radius-small: 1px;
+
+html, body {
+  background-color: @main-background;
+  font: 16px "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  min-width: 768px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.text-ellisip {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.flex-box(@top, @left, @bottom, @right) {
+  position: absolute;
+  top: @top;
+  left: @left;
+  bottom: @bottom;
+  right: @right;
+}
+
+.make-button-with-style(@width, @height, @bg, @color, @border-color) {
+  .shadow;
+  width: @width;
+  height: @height;
+  background: @bg;
+  color: @color;
+  border: 1px solid @border-color;
+  border-radius: 1px;
+}
+
+.make-button(@width, @height) {
+  width: @width;
+  height: @height;
+  border-radius: 1px;
+}
+
+.shadow {
+  box-shadow: 0 0 7px rgba(0, 0, 0, .15);
+}
+
+.default-text(@font-size: 14px, @color: @color-dark, @font-weight: 400) {
+  font-size: @font-size;
+  color: @color;
+  font-weight: @font-weight;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.vendor(@property, @value){
+  -webkit-@{property}: @value;
+  -moz-@{property}: @value;
+  -ms-@{property}: @value;
+  -o-@{property}: @value;
+    @{property}: @value;
+}
+
+a {
+  text-decoration: none;
+  color: @main-text-color;
+}

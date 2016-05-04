@@ -10,7 +10,9 @@ requirejs.config({
         'q': '../node_modules/q/q',
         'framework': '../node_modules/cmvp-framework/src/ApplicationFactory',
         'cmvp': '../node_modules/cmvp-framework/src/cmvp',
-        'meld': '../node_modules/meld/meld'
+        'meld': '../node_modules/meld/meld',
+        'slider': '../assets/vendors/jquery.bxslider.min',
+        'easing': '../node_modules/jquery.easing/jquery.easing.min'
     },
 
     'shim': {
@@ -34,26 +36,32 @@ requirejs.config({
 
         'postal': {
             exports: 'postal'
+        },
+
+        'easing': {
+            deps: ['jquery'],
+            exports: 'easing'
+        },
+
+        'slider': {
+            deps: ['jquery', 'easing'],
+            exports: 'slider'
         }
     },
 
-    'deps': ['main', 'angular', 'angular-route', 'jquery', 'q', 'postal', 'meld', 'framework'],
+    'deps': ['main', 'angular', 'angular-route', 'jquery', 'q', 'postal', 'meld', 'framework', 'slider', 'easing'],
     'callback': function() {
         require(['main']);
     },
     // for requirejs compilation:
     'include': [
-        'lodash', 'angular-route', 'angular', 'jquery', 'postal', 'q',
+        'lodash', 'angular-route', 'angular', 'jquery', 'postal', 'q', 'slider', 'easing',
         'framework',
         'cmvp/services/EventBus', 'cmvp/services/AjaxService', 'cmvp/aspects/ViewRepaintAspect',
-        'ui/PomodoroModel.js',
-        'ui/PomodoroView.js',
-        'ui/PomodoroPresenter.js',
-        'ui/PomodoroController.js',
-        'ui/NumbersModel.js',
-        'ui/NumbersView.js',
-        'ui/NumbersPresenter.js',
-        'ui/NumbersController.js',
+        'ui/header/HeaderModel.js',
+        'ui/header/HeaderView.js',
+        'ui/header/HeaderPresenter.js',
+        'ui/header/HeaderController.js',
         //CMVP-SCRIPT-PLACEHOLDER
         'main'
     ]

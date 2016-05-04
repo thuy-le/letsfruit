@@ -1,0 +1,98 @@
+@logo-height: 35px;
+@menu-height: 30px;
+
+[class*="fresh-fruit-navbar-"] {
+  .top-bar-wrapper {
+    height: 70px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    border-radius: 0;
+
+    .top-bar {
+      margin: 0 auto;
+      width: 80%;
+      padding-top: calc((70px - @logo-height) / 2);
+
+      .logo-wrapper {
+        float: left;
+        display: inline-block;
+        font-size: @logo-height;
+        font-family: fruityFont;
+        color: @main-green;
+        font-weight: bold;
+        img {
+          height: 30px;
+        }
+      }
+
+      .authentication-wrapper {
+        float: right;
+        display: inline-block;
+        a:hover, a:active, a:visited {
+          text-decoration: none;
+          color: @main-yellow;
+        }
+      }
+
+    }
+
+  }
+
+  .navbar {
+
+    background: @main-green;
+    height: @menu-height;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      width: 80%;
+      margin: 15px auto;
+
+      li {
+        float:left;
+        a {
+          display: block;
+          padding: 0 35px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          text-decoration: none;
+          &:first-child {
+            padding-left: 0;
+          }
+
+          &:hover, &:active, &:focus {
+            color: @light-yellow;
+            text-decoration: none;
+          }
+
+        }
+
+        &:last-child {
+          float: right;
+          a {
+            padding-right: 0;
+            i {
+              font-size: 1.5em;
+            }
+          }
+        }
+
+        &.active {
+          a {
+            color: @light-yellow;
+            font-weight: 600;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+

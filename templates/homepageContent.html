@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="fruit-slide col-sm-12">
+        <h2>Fruits</h2>
+        <div class="fruit-item col-sm-4" ng-repeat="img in data.images">
+            <img src="{{ img.image }}"/><br/>
+            <div class="desc">
+                <span class="title">{{ img.title }}</span><br/>
+                <span class="price">{{ img.price }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="package-slide col-sm-12">
+        <h2 class="package">Packages</h2>
+        <div class="col-sm-1"></div>
+        <div class="fruit-item col-sm-4" ng-repeat="img in data.packages">
+            <img src="{{ img.image }}"/><br/>
+            <div class="desc">
+                <span class="title">{{ img.title }}</span><br/>
+                <span class="price">{{ img.price }}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
