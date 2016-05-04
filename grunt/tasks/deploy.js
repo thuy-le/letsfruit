@@ -6,6 +6,10 @@ module.exports = function(grunt) {
         'build:dev',
         'concurrent:dev-deploy'
     ]);
+    grunt.registerTask('default', [
+        'build:dev',
+        'concurrent:dev-deploy'
+    ]);
     grunt.registerTask('deploy:prod', [
         'build:prod',
         'http-server:dev'
