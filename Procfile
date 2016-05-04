@@ -1,1 +1,1 @@
-web: grunt deploy:dev
+web: npm install && node_modules/.bin/grunt heroku
