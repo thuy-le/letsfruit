@@ -1,21 +1,20 @@
 <div class="top-bar-wrapper">
-    <div class="top-bar">
-        <div class="logo-wrapper">
-            <img src="build/assets/images/logo.png" />
-        </div>
+    <div class="container">
         <div class="authentication-wrapper">
-            <a href="#">Signup</a> | <a href="#">Signin</a>
+            <a href="#">Sign in</a> | <a href="/#/signup">Sign up</a> | <img class="cart" src="/build/assets/images/cart.png"/>
+            <div class="cart-total"><span>12</span></div>
         </div>
     </div>
 </div>
 <div class="navbar navbar-default">
-    <ul>
-        <li class="active"><a href="#">home</a></li>
-        <li><a href="#">fruit</a></li>
-        <li><a href="#">package</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">contact</a></li>
-        <li><a href="#"><i class="fa fa-shopping-cart"></i> 0</a></li>
-    </ul>
+    <div class="container">
+        <img src="/build/assets/images/logo.png"/>
+        <ul>
+            <li ng-class="{'active': currentPage === 'homepage'}"><a href="#">home</a></li>
+            <li ng-class="{'active': currentPage === 'about'}"><a href="/#/about">about</a></li>
+            <li ng-class="{'active': currentPage === 'fruit'}"><a href="/#/fruit">fruit</a></li>
+            <li ng-class="{'active': currentPage === 'package'}"><a href="/#/package">package</a></li>
+            <li ng-class="{'active': currentPage === 'blog'}"><a href="/#/blog">blog</a></li>
+        </ul>
+    </div>
 </div>

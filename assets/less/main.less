@@ -11,6 +11,9 @@
 @import "templates/banner";
 @import "templates/homepage";
 @import "templates/footer";
+@import "templates/blog";
+@import "templates/signup";
+@import "templates/fruit-detail";
 
 @font-face {
   font-family: fruityFont;
@@ -27,6 +30,11 @@
   src: url("/assets/less/fonts/avoBold.ttf");
 }
 
+@font-face {
+  font-family: linotype;
+  src: url("/assets/less/fonts/linotype.ttf");
+}
+
 
 html, body {
   background-color: #FFFFFF;
@@ -34,4 +42,22 @@ html, body {
   font-family: @main-font;
   font-size: @font-size;
   color: @main-text-color;
+}
+
+.container {
+  &.about {
+    padding-top: 25px;
+    min-height: 200px;
+  }
+}
+
+.social-pack {
+  position: fixed;
+  top: 300px;
+  a {
+    display: block;
+    img {
+      width: 1.5em;
+    }
+  }
 }

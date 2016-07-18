@@ -1,12 +1,30 @@
 #main-side {
-  margin-top: 500px;
+  .title {
+    text-align: center;
+    padding: 15px 0 25px;
 
-  h2 {
-    color: @main-green;
-    font-size: 1.2em;
-    font-family: avoBoldFont;
-    background: url("/build/assets/images/leave.png") 0 -2px no-repeat;
-    padding-left: 20px;
+    .line {
+      border-bottom: 1px solid #b7b7b7;
+      width: 100%;
+      position: relative;
+      top: 1.2em;
+    }
+
+    .text {
+      position: relative;
+      a {
+        color: @main-green;
+        font-size: 1.2em;
+        font-family: avoFont;
+        text-transform: uppercase;
+        padding: 0 5px;
+        background: #FFF;
+      }
+      
+      a:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   .fruit-slide, .package-slide {
@@ -17,9 +35,9 @@
     &> div {
       margin: 0;
       padding-left: 0;
+      padding-bottom: 25px;
 
       img {
-        border-radius: 7px;
         width: 100%;
       }
 
@@ -28,11 +46,16 @@
         span.title {
           text-transform: uppercase;
           font-family: @main-font-bold;
+          padding-top: 0;
         }
       }
 
     }
 
+  }
+
+  .fruit-slide {
+    margin-top: 35px;
   }
 
 }

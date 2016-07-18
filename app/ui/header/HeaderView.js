@@ -8,14 +8,6 @@ define(function(require) {
     function HeaderView(di) {
         BaseView.constructor(this, di);
         this._initFn();
-        $(document).ready(function() {
-            $('.bxslider').bxSlider({
-                auto: true,
-                autoControls: true,
-                controls: false,
-                pager: false
-            });
-        });
     }
 
     HeaderView.newInstance = function(di) {
@@ -37,19 +29,26 @@ define(function(require) {
         console.log(error);
     };
 
-    HeaderView.prototype.onLoad = function() {
+    HeaderView.prototype.onLoad = function(showBanner) {
+        this.data.showBanner = showBanner;
         this.event.onLoad();
     };
 
     HeaderView.prototype.onLoaded = function(data) {
         this.data.images = [
-            {image: '/build/assets/images/fruits/19.png', title: 'orange', price: '35.000/kg'},
-            {image: '/build/assets/images/fruits/20.png', title: 'grape', price: '35.000/kg'},
-            {image: '/build/assets/images/fruits/21.png', title: 'mango', price: '35.000/kg'},
+            {image: '/build/assets/images/homepage/apple.png', title: 'apple', price: '35.000/kg'},
+            {image: '/build/assets/images/homepage/grape.png', title: 'grape', price: '35.000/kg'},
+            {image: '/build/assets/images/homepage/guava.png', title: 'guava', price: '35.000/kg'},
+            {image: '/build/assets/images/homepage/logan.png', title: 'logan', price: '35.000/kg'},
+            {image: '/build/assets/images/homepage/mango.png', title: 'mango', price: '35.000/kg'},
+            {image: '/build/assets/images/homepage/mangosteen.png', title: 'mangosteen', price: '35.000/kg'},
+            {image: '/build/assets/images/homepage/orange.png', title: 'orange', price: '35.000/kg'},
+            {image: '/build/assets/images/homepage/peach.png', title: 'peach', price: '35.000/kg'},
+            {image: '/build/assets/images/homepage/watermelon.png', title: 'watermelon', price: '35.000/kg'}
         ];
         this.data.packages = [
-            {image: '/build/assets/images/fruits/19.png', title: 'Deluxe', price: '350.000/mo'},
-            {image: '/build/assets/images/fruits/20.png', title: 'Healthy', price: '150.000/mo'}
+            {image: '/build/assets/images/homepage/large package.png', title: 'Large package', price: '500.000/mo'},
+            {image: '/build/assets/images/homepage/small package.png', title: 'Small package', price: '300.000/mo'}
         ];
     };
 

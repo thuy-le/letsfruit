@@ -1,11 +1,5 @@
-<div class="slider">
-
-    <ul class="bxslider">
-        <li><img src="/build/assets/images/1.png"/></li>
-        <li><img src="/build/assets/images/2.png"/></li>
-        <li><img src="/build/assets/images/3.png"/></li>
-    </ul>
-
+<div class="img-placeholder">
+    <img ng-if="data.showImage" ng-animate="{enter: 'show-hide'}" ng-src="{{data.currentSlide.url}}" style="margin:auto;">
 </div>
 
 <div class="clearfix"></div>

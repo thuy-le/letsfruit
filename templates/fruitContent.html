@@ -1,0 +1,19 @@
+<div class="container fruit">
+
+    <div class="fruit-slide col-sm-12">
+        <div class="title">
+            <div class="line"></div>
+            <div class="text"> <a href="#">Fruits Available</a></div>
+
+        </div>
+
+        <div class="fruit-item col-sm-4" ng-repeat="img in data.images">
+            <a href="/#/fruit-detail"><img src="{{ img.image }}"/></a><br/>
+            <div class="desc">
+                <span class="title">{{ img.title }}</span><br/>
+                <span class="price">{{ img.price }}</span>
+            </div>
+        </div>
+    </div>
+
+</div>

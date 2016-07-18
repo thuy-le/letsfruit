@@ -1,8 +1,8 @@
 .PHONY: docker-image docker-test docker-build docker-push docker-deploy
 
-PROJECT=cmvp-seed
+PROJECT=fruit
 TAG=latest
-IMAGE=docker.apiumtech.io/$(PROJECT)
+IMAGE=heroku/fruit
 
 docker-image:
 	@docker build -t $(IMAGE) .

@@ -1,91 +1,103 @@
 @logo-height: 35px;
-@menu-height: 30px;
+@menu-height: 70px;
 
 [class*="fresh-fruit-navbar-"] {
   .top-bar-wrapper {
-    height: 70px;
     margin: 0;
     border: 0;
-    padding: 0;
-    background-color: #FFFFFF;
+    background-color: @main-green;
+    color: #FFFFFF;
     border-radius: 0;
+    padding: .4em 0 .8em;
+    font-size: .9em;
+    height: 2.5em;
 
-    .top-bar {
-      margin: 0 auto;
-      width: 80%;
-      padding-top: calc((70px - @logo-height) / 2);
-
-      .logo-wrapper {
-        float: left;
-        display: inline-block;
-        font-size: @logo-height;
-        font-family: fruityFont;
-        color: @main-green;
-        font-weight: bold;
-        img {
-          height: 30px;
-        }
+    .authentication-wrapper {
+      float: right;
+      a {
+        color: #FFFFFF;
+      }
+      a:hover, a:active {
+        text-decoration: none;
+        color: @main-orange;
+      }
+      img.cart {
+        height: 1em;
+        margin-top: -2px;
       }
 
-      .authentication-wrapper {
+      .cart-total {
+        font-size: .8em;
+        width: 1.3em;
+        height: 1.3em;
+        background: @main-orange;;
+        border-radius: 50%;
+        text-align: center;
         float: right;
-        display: inline-block;
-        a:hover, a:active, a:visited {
-          text-decoration: none;
-          color: @main-yellow;
+        position: relative;
+        top: 10px;
+        left: -2px;
+        span {
+          font-size: .9em;
+          position: relative;
+          top: -3px;
+          left: -1px;
         }
       }
-
     }
-
   }
 
-  .navbar {
+  .navbar, .navbar-default {
 
-    background: @main-green;
+    background: rgba(255, 255, 255, .9);
     height: @menu-height;
     padding: 0;
     margin: 0;
     border: none;
+    width: 100%;
+    position: absolute;
+    top: 2.3em;
+    left: 0;
+    z-index: 999;
+
+    img {
+      float: left;
+      margin-top: 10px;
+      height: 40px;
+    }
 
     ul {
+      float: right;
       list-style-type: none;
       padding: 0;
-      width: 80%;
-      margin: 15px auto;
+      margin: 20px auto;
 
       li {
-        float:left;
+        float: left;
         a {
           display: block;
-          padding: 0 35px;
-          text-transform: uppercase;
-          color: #FFFFFF;
+          padding: 0 20px;
+          text-transform: capitalize;
+          color: @main-green;
           text-decoration: none;
-          &:first-child {
-            padding-left: 0;
+
+          &:last-child {
+            padding-right: 0;
           }
 
           &:hover, &:active, &:focus {
-            color: @light-yellow;
+            color: @main-orange;
             text-decoration: none;
           }
 
         }
 
-        &:last-child {
-          float: right;
-          a {
-            padding-right: 0;
-            i {
-              font-size: 1.5em;
-            }
-          }
-        }
-
         &.active {
           a {
-            color: @light-yellow;
+            background: url("/build/assets/images/leaf.png") 0 -3px no-repeat;
+            padding-left: 20px;
+            margin-left: 10px;
+            color: @main-orange;
             font-weight: 600;
           }
         }

@@ -15,6 +15,13 @@ define([
 
         $routeProvider
             .when('/model/:modelId', {templateUrl: '/templates/homepage.html'})
+            .when('/about', {templateUrl: '/templates/about.html'})
+            .when('/fruit', {templateUrl: '/templates/fruit.html'})
+            .when('/package', {templateUrl: '/templates/package.html'})
+            .when('/blog', {templateUrl: '/templates/blog.html'})
+            .when('/signup', {templateUrl: '/templates/signup.html'})
+            .when('/blog-detail', {templateUrl: '/templates/blogDetail.html'})
+            .when('/fruit-detail', {templateUrl: '/templates/fruitDetail.html'})
             .otherwise({templateUrl: '/templates/homepage.html'});
     }
 
@@ -23,14 +30,20 @@ define([
     /** Application Building **/
     var app = ApplicationFactory.newRequireApplication('RequireJS')
         .composedWith(ApplicationFactory.newAngularApplication('AngularApp', [
-            'ngRoute'
+            'ngRoute', 'ngAnimate'
         ], AngularConfig));
 
     app.manifest = {
         authors: [ 'apiumtech' ],
         version: 0.1,
         src: [
-            'ui/header/HeaderController'
+            'ui/header/HeaderController',
+            'ui/banner/BannerController',
+            'ui/homepage/HomepageController',
+            'ui/fruit/FruitController',
+            'ui/about/AboutController',
+            'ui/package/PackageController',
+            'ui/blog/BlogController'
         ]
     };
 

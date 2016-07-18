@@ -1,0 +1,18 @@
+web:
+  build: .
+  command: 'bash -c ''npm install && node_modules/.bin/grunt deploy:dev'''
+  working_dir: /app/user
+  environment:
+    PORT: 9000
+  ports:
+    - '9000:9000'
+shell:
+  build: .
+  command: bash
+  working_dir: /app/user
+  environment:
+    PORT: 8080
+  ports:
+    - '8080:8080'
+  volumes:
+    - '.:/app/user'

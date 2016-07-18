@@ -1,4 +1,17 @@
-<nav class="fresh-fruit-navbar fresh-fruit-navbar-default" ng-include="'templates/header.html'" ng-init="event.onLoad()"></nav>
-<div class="fresh-fruit-banner" ng-include="'templates/banner.html'"></div>
+<nav class="fresh-fruit-navbar fresh-fruit-navbar-default" ng-include="'templates/header.html'"></nav>
+
+<div class="fresh-fruit-banner"
+     ng-if="data.showBanner"
+     ng-controller="BannerController"
+     ng-init="event.onLoad()"
+     ng-include="'templates/banner.html'"></div>
+
+<div class="fresh-fruit-banner"
+     ng-if="!data.showBanner"
+     ng-controller="BannerController"
+     ng-init="event.onLoad()"
+     ng-include="'templates/banner-small.html'"></div>
+
 <div id="main-side" ng-include="pageContent"></div>
+
 <div class="fresh-fruit-banner" ng-include="'templates/footer.html'"></div>
